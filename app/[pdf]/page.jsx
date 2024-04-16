@@ -82,7 +82,7 @@ function page({params}) {
         onLoadSuccess={onDocumentLoadSuccess}
       >
         <Page pageNumber={pageNumber} renderAnnotationLayer={false} 
-  renderTextLayer={false} height={window.innerHeight * 0.92} scale={zoom}/>
+  renderTextLayer={false}  scale={zoom}/>
       </Document>
       <div className='flex'>
       <p onClick={()=>{numPages>1 && setToggle(true)}}>
