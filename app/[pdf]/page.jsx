@@ -38,8 +38,8 @@ function page({params}) {
     changePage(1);
   }
   return (
-    <FullScreen handle={handle}>
-        <div className="w-screen min-h-screen flex flex-col items-center bg-yellow-500">
+    <FullScreen handle={handle} className='overflow-y-scroll'>
+        <div className=" min-h-screen flex flex-col items-center bg-yellow-500">
           
           <div>
           <button onClick={handle.enter} style={{display: handle.active ? 'none' : 'inline'}}>
@@ -82,7 +82,7 @@ function page({params}) {
         onLoadSuccess={onDocumentLoadSuccess}
       >
         <Page pageNumber={pageNumber} renderAnnotationLayer={false} 
-  renderTextLayer={false} width={window.innerWidth * 0.9} scale={zoom}/>
+  renderTextLayer={false} width={window.innerWidth * 0.92} scale={zoom}/>
       </Document>
       <div className='flex'>
       <p onClick={()=>{numPages>1 && setToggle(true)}}>
